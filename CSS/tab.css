@@ -1,0 +1,173 @@
+#menu {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 90%;
+    background: var(--primary-color);
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: .5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#menu ul {
+    margin-left: 5%;
+    margin-top: 50px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    color: var(--secondary-color);
+}
+
+#menu ul li {
+    margin-top: 50px;
+}
+
+#menu ul li a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #fc00ff, #00dbde);
+}
+
+
+/* NAVBAR */
+
+#navbar ul {
+    display: none;
+}
+
+#bars {
+    z-index: 99;
+    display: flex;
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(255, 101, 47, .2);
+    transition: all 0.5s ease-in-out;
+}
+
+#bars::before,
+#bars::after {
+    content: '';
+    z-index: 99;
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(255, 101, 47, .2);
+    transition: all 0.5s ease-in-out;
+}
+
+#bars::before {
+    z-index: 99;
+    transform: translateY(-8px);
+}
+
+#bars::after {
+    z-index: 99;
+    transform: translateY(8px);
+}
+
+.open #bars {
+    z-index: 99;
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.open #bars::before {
+    z-index: 99;
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.open #bars::after {
+    z-index: 99;
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+
+/* Profile Section */
+
+#profile-section {
+    flex-direction: column-reverse;
+}
+
+#profile-pic {
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+#profile-section p {
+    margin-right: 0;
+}
+
+
+/* SOCIALS SECTION  */
+
+.socialmedias {
+    flex-wrap: wrap;
+}
+
+.icon {
+    margin: 10px;
+}
+
+
+/* FOOTER */
+
+.row {
+    margin-right: 20%;
+    margin-bottom: 10px;
+}
+
+#l-row {
+    margin-right: 0;
+}
+
+
+/* MEDIA QUERRIES */
+
+@media only screen and (max-width: 400px) {
+    .row {
+        margin-right: 10%;
+    }
+}
+
+@media only screen and (max-width: 302px) {
+    .row {
+        margin-right: 2%;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .square {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 444px) {
+    .square {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 444px) {
+    .square {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 397px) {
+    #profile-section h1 {
+        font-size: 2.5rem;
+    }
+}
