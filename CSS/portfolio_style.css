@@ -135,6 +135,7 @@ body {
 }
 
 #socials i {
+    color: #6b6b6b;
     padding: 6px;
     transition: color 0.2s linear;
 }
