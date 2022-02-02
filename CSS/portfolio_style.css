@@ -505,6 +505,14 @@ body {
     transition: 0.5s linear;
 }
 
+.remove_list_style {
+list-style: none;
+}
+
+.remove_link_style {
+text-decoration: none;
+color: inherit;
+}
 
 /* MEDIA QUERRIES */
 
