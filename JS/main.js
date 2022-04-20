@@ -4,6 +4,8 @@ let darkmode = document.getElementById("darkmode");
 
 darkmode.innerHTML = '<i class="fas fa-moon"></i>';
 
+let skill = document.getElementsByClassName('skills');
+
 function handleDarkMode() {
     let r = document.querySelector(":root");
     if (darkMode == false) {
@@ -12,6 +14,7 @@ function handleDarkMode() {
         r.style.setProperty("--tirtiary-color", "rgba(35, 35, 35, 1)");
         r.style.setProperty("--light-color", "#aaaaaa");
         darkmode.innerHTML = '<i class="fas fa-sun"></i>';
+
         darkMode = true;
     } else {
         r.style.setProperty("--primary-color", "#fff");
@@ -19,6 +22,7 @@ function handleDarkMode() {
         r.style.setProperty("--tirtiary-color", "rgba(236, 236, 236, 1)");
         r.style.setProperty("--light-color", "rgb(114, 114, 114)");
         darkmode.innerHTML = '<i class="fas fa-moon"></i>';
+
         darkMode = false;
     }
 }
